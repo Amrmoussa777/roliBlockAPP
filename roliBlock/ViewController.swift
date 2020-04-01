@@ -7,14 +7,138 @@
 //
 
 import UIKit
-
+import AVFoundation
 class ViewController: UIViewController {
-
+    var player: AVAudioPlayer?
+    var btnsPlayer: AVAudioPlayer?
+    var musicNames = [1:"1st_String_E_64kb.mp3",
+                      2:"2nd_String_B__64kb.mp3",
+                      3:"5th_String_A_64kb.mp3",
+                      4:"65th_String_A_64kb.mp3",
+                      5:"B.wav",
+                      6:"C.wav",
+                      7:"D.wav",
+                      8:"E.wav",
+                      9:"F.wav",
+                      10:"G.wav",
+                      11:"A.wav",
+                      12:"B.wav",
+                      13:"C.wav",
+                      14:"D.wav",
+                      15:"F.wav",
+                      16:"G.wav",
+      ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playSound()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func gridButtonGrid(_ sender: UIButton) {
+        makescale(sender)
+//        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+//        Thread.sleep(until: )
+//        sender.transform = CGAffineTransform(scaleX: 1 , y: 1)
+        switch sender.tag {
+        case 1:
+            playbuttonmusic(musicNames[1]!)
+        case 2:
+            playbuttonmusic(musicNames[2]!)
+        case 3:
+             playbuttonmusic(musicNames[3]!)
+        case 4:
+             playbuttonmusic(musicNames[4]!)
+        case 5:
+             playbuttonmusic(musicNames[5]!)
+        case 6:
+            playbuttonmusic(musicNames[6]!)
+        case 7:
+            playbuttonmusic(musicNames[7]!)
+        case 8:
+                 playbuttonmusic(musicNames[8]!)
+        case 9:
+                 playbuttonmusic(musicNames[9]!)
+        case 10:
+                 playbuttonmusic(musicNames[10]!)
+        case 11:
+                 playbuttonmusic(musicNames[11]!)
+        case 12:
+                 playbuttonmusic(musicNames[12]!)
+        case 13:
+                 playbuttonmusic(musicNames[13]!)
+        case 14:
+                 playbuttonmusic(musicNames[14]!)
+        case 15:
+                 playbuttonmusic(musicNames[15]!)
+        case 16:
+                 playbuttonmusic(musicNames[16]!)
+          
+        default:
+            print("Music switshcase error")
+        }
+        
+        
+    }
+   
+    func makescale(_ uisender:UIButton){
+        uisender.transform = CGAffineTransform(scaleX: -1, y: 1)
 
+        UIView.animate(withDuration: 0.5, animations: { () -> Void in
+
+            uisender.transform = CGAffineTransform(scaleX: 1,y: 1)
+
+      })
+        
+    }
+    
+    func playbuttonmusic(_ fName:String  ){
+        let spliitedName  = fName.split(separator: ".")
+        print(spliitedName)
+        guard let url = Bundle.main.url(forResource: spliitedName[0].description, withExtension: spliitedName[1].description) else { return }
+
+         do {
+             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+             try AVAudioSession.sharedInstance().setActive(true)
+
+             /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+              btnsPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+             /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+             guard let player = btnsPlayer else { return }
+             player.numberOfLoops = 1
+             player.play()
+
+         } catch let error {
+             print(error.localizedDescription)
+         }
+        
+        
+        
+        
+    }
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "carbackground", withExtension: "wav") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+            player.numberOfLoops = -1
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 
