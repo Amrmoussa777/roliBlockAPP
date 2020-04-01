@@ -28,11 +28,19 @@ class ViewController: UIViewController {
                       15:"F.wav",
                       16:"G.wav",
       ]
+    @IBOutlet weak var playButton: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        arrowright.transform = CGAffineTransform(scaleX: 1, y: -1)
         playSound()
+//        let imageData = try? Data(contentsOf: Bundle.main.url(forResource: "giphy", withExtension: "gif")!)
+//          let advTimeGif = UIImage.gifImageWithData(imageData!)
+//          let imageView2 = UIImageView(image: advTimeGif)
+//          imageView2.frame = CGRect(x: 20.0, y: 220.0, width:
+//          self.view.frame.size.width - 40, height: 150.0)
+//          view.addSubview(imageView2)
         // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func gridButtonGrid(_ sender: UIButton) {
