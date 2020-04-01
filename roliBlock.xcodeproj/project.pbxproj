@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F7ABA102434D3D0002B8655 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F7ABA0F2434D3D0002B8655 /* giphy.gif */; };
 		1FFE0B002433F2D700AFB3E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE0AFF2433F2D700AFB3E6 /* AppDelegate.swift */; };
 		1FFE0B022433F2D700AFB3E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE0B012433F2D700AFB3E6 /* SceneDelegate.swift */; };
 		1FFE0B042433F2D700AFB3E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE0B032433F2D700AFB3E6 /* ViewController.swift */; };
@@ -41,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F7ABA0F2434D3D0002B8655 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = giphy.gif; path = ../../../Roll_dice/giphy.gif; sourceTree = "<group>"; };
 		1FFE0AFC2433F2D700AFB3E6 /* roliBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = roliBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFE0AFF2433F2D700AFB3E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFE0B012433F2D700AFB3E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 		1FFE0B1824341DF800AFB3E6 /* music */ = {
 			isa = PBXGroup;
 			children = (
-				1F7ABA0F2434D3D0002B8655 /* giphy.gif */,
 				1FFE0B2C24341E4800AFB3E6 /* 1st_String_E_64kb.mp3 */,
 				1FFE0B2324341E4800AFB3E6 /* 2nd_String_B__64kb.mp3 */,
 				1FFE0B1924341E4700AFB3E6 /* 3rd_String_G_64kb.mp3 */,
@@ -222,7 +219,6 @@
 				1FFE0B3F24341E4800AFB3E6 /* E.wav in Resources */,
 				1FFE0B3724341E4800AFB3E6 /* C.wav in Resources */,
 				1FFE0B3B24341E4800AFB3E6 /* 2nd_String_B__64kb.mp3 in Resources */,
-				1F7ABA102434D3D0002B8655 /* giphy.gif in Resources */,
 				1FFE0B3924341E4800AFB3E6 /* C_64kb.mp3 in Resources */,
 				1FFE0B3824341E4800AFB3E6 /* carbackground.wav in Resources */,
 				1FFE0B3E24341E4800AFB3E6 /* Dm_64kb.mp3 in Resources */,

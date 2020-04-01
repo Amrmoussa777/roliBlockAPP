@@ -48,43 +48,44 @@ class ViewController: UIViewController {
 //        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
 //        Thread.sleep(until: )
 //        sender.transform = CGAffineTransform(scaleX: 1 , y: 1)
-        switch sender.tag {
-        case 1:
-            playbuttonmusic(musicNames[1]!)
-        case 2:
-            playbuttonmusic(musicNames[2]!)
-        case 3:
-             playbuttonmusic(musicNames[3]!)
-        case 4:
-             playbuttonmusic(musicNames[4]!)
-        case 5:
-             playbuttonmusic(musicNames[5]!)
-        case 6:
-            playbuttonmusic(musicNames[6]!)
-        case 7:
-            playbuttonmusic(musicNames[7]!)
-        case 8:
-                 playbuttonmusic(musicNames[8]!)
-        case 9:
-                 playbuttonmusic(musicNames[9]!)
-        case 10:
-                 playbuttonmusic(musicNames[10]!)
-        case 11:
-                 playbuttonmusic(musicNames[11]!)
-        case 12:
-                 playbuttonmusic(musicNames[12]!)
-        case 13:
-                 playbuttonmusic(musicNames[13]!)
-        case 14:
-                 playbuttonmusic(musicNames[14]!)
-        case 15:
-                 playbuttonmusic(musicNames[15]!)
-        case 16:
-                 playbuttonmusic(musicNames[16]!)
-          
-        default:
-            print("Music switshcase error")
-        }
+        playbuttonmusic(musicNames[sender.tag]!)
+//        switch sender.tag {
+//        case 1:
+//            playbuttonmusic(musicNames[1]!)
+//        case 2:
+//            playbuttonmusic(musicNames[2]!)
+//        case 3:
+//             playbuttonmusic(musicNames[3]!)
+//        case 4:
+//             playbuttonmusic(musicNames[4]!)
+//        case 5:
+//             playbuttonmusic(musicNames[5]!)
+//        case 6:
+//            playbuttonmusic(musicNames[6]!)
+//        case 7:
+//            playbuttonmusic(musicNames[7]!)
+//        case 8:
+//                 playbuttonmusic(musicNames[8]!)
+//        case 9:
+//                 playbuttonmusic(musicNames[9]!)
+//        case 10:
+//                 playbuttonmusic(musicNames[10]!)
+//        case 11:
+//                 playbuttonmusic(musicNames[11]!)
+//        case 12:
+//                 playbuttonmusic(musicNames[12]!)
+//        case 13:
+//                 playbuttonmusic(musicNames[13]!)
+//        case 14:
+//                 playbuttonmusic(musicNames[14]!)
+//        case 15:
+//                 playbuttonmusic(musicNames[15]!)
+//        case 16:
+//                 playbuttonmusic(musicNames[16]!)
+//          
+//        default:
+//            print("Music switshcase error")
+//        }
         
         
     }
